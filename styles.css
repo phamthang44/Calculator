@@ -100,12 +100,12 @@ body {
 
 @media screen and (max-width: 480px) {
   html {
-    font-size: 100%;
+    font-size: 50%;
   }
   .display {
-    font-size: 3rem; /* Further reduced for smaller screens */
+    font-size: 10rem; /* Further reduced for smaller screens */
   }
   .button {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
