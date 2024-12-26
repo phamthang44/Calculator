@@ -58,7 +58,7 @@ function showNumber(e) {
 function changeClearButton() {
   const ac = document.querySelector(".clear");
   if (ac) {
-    if (display.innerHTML.length > 1) {
+    if (display.innerHTML) {
       ac.innerHTML = "⌫";
     } else {
       ac.innerHTML = "AC";

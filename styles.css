@@ -16,8 +16,6 @@ body {
   background-color: #000000;
   width: 400px;
   height: 700px;
-  margin-left: 500px;
-  margin-top: 50px;
   position: relative;
   border-radius: 20px;
 }
@@ -92,4 +90,22 @@ body {
   font-size: 4rem;
   color: #8c8c8c;
   padding: 20px 20px 0px 0px;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 55%; /* Adjusted font size for medium screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 100%;
+  }
+  .display {
+    font-size: 3rem; /* Further reduced for smaller screens */
+  }
+  .button {
+    font-size: 2rem;
+  }
 }
