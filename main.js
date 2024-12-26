@@ -2,10 +2,8 @@ const features = document.querySelector(".features");
 const lastResult = document.querySelector(".last-result");
 const display = document.querySelector(".display");
 
-//   lastResult.style.opacity = 1;
 features.addEventListener("click", showNumber);
 features.addEventListener("click", handleClear);
-// features.addEventListener("click", displayZero);
 features.addEventListener("click", handleConvertNumber);
 features.addEventListener("click", showPercentNumber);
 features.addEventListener("click", checkDisplay);
@@ -15,43 +13,15 @@ features.addEventListener("mousedown", handleNaN);
 features.addEventListener("click", handleNaN);
 features.addEventListener("click", handleUndefined);
 features.addEventListener("mousedown", handleUndefined);
+
 function showNumber(e) {
-  //   let fontSize = parseFloat(window.getComputedStyle(display).fontSize);
-  //   fontSize = fontSize / 10;
-  //   let stringNumber = display.innerHTML;
-
-  if (e.target.classList.contains("number")) {
-    let number = +e.target.innerHTML;
-    if (
-      display.innerHTML === "0" ||
-      display.innerHTML === lastResult.innerHTML
-    ) {
-      display.innerHTML = "";
-    }
-
-    if (isNumber(number)) {
-      display.innerHTML += String(number);
-    }
+  let number = +e.target.innerHTML;
+  if (display.innerHTML === "0" || display.innerHTML === lastResult.innerHTML) {
+    display.innerHTML = "";
   }
-
-  //   if (stringNumber.length > 6) {
-  //     if (fontSize > 5) {
-  //       fontSize--;
-  //     }
-  //     display.style.setProperty("font-size", `${fontSize}rem`);
-  //     if (fontSize <= 5 && stringNumber.length > 10) {
-  //       stringNumber = Number(stringNumber).toExponential(0);
-  //       display.innerHTML = String(stringNumber);
-  //     }
-  //     if (stringNumber.includes("Infinity")) {
-  //       display.innerHTML = "Infinity";
-  //     } else if (stringNumber.includes("-Infinity")) {
-  //       display.innerHTML = "-Infinity";
-  //     }
-  //   } else {
-  //     display.style.setProperty("font-size", `7rem`);
-  //   }
-
+  if (isNumber(number)) {
+    display.innerHTML += String(number);
+  }
   changeClearButton();
 }
 
@@ -275,7 +245,6 @@ function handleOperators(e) {
         } else if (helpMe.includes("÷")) {
           handleDivide();
         }
-
         saveLastResult();
         break;
       default:
