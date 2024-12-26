@@ -38,13 +38,6 @@ function changeClearButton() {
 
 function handleClear(e) {
   let resultDisplay = display.innerHTML;
-  //   let fontSize = parseFloat(window.getComputedStyle(display).fontSize);
-  //   fontSize = fontSize / 10;
-  //console.log(isInfinity(Number(resultDisplay)));
-
-  //   if (isInfinity(Number(resultDisplay))) {
-  //     handleClearInfinity();
-  //   }
 
   if (e.target.className === "button btn-top clear") {
     if (isExponential(display.innerHTML)) {
@@ -76,16 +69,6 @@ function handleClear(e) {
         }
 
         result.splice(-1, 1);
-
-        // if (resultDisplay.length > 9) {
-        //   fontSize--;
-        //   display.style.setProperty("font-size", `${fontSize}rem`);
-        // } else if (fontSize <= 5) {
-        //   fontSize++;
-        //   display.style.setProperty("font-size", `${fontSize}rem`);
-        // } else {
-        //   result.splice(1);
-        // }
 
         display.innerHTML = result.join("");
       } else if (clear.innerHTML === "AC") {
